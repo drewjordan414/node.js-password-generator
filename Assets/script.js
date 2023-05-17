@@ -38,36 +38,44 @@ function generatePassword() {
     console.log(passwordLength);
     return;
   }
+
+
+  // confirm to include uppercase letters, lowercase letters, numeric, special characters
+  if (confirm("Do you want to include uppercase letters?")) {
+    apc = apc.concat("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
+    console.log(apc);
+  }
+  if (confirm("Do you want to include lowercase letters?")) {
+    // add option for yes or no
+    apc = apc.concat("abcdefghijklmnopqrstuvwxyz");
+    console.log(apc);
+  }
+  if (confirm("Do you want to include numbers?")) {
+    // add option for yes or no
+    apc = apc.concat("0123456789");
+    console.log(apc);
+  }
+  if (confirm("Do you want to include special characters?")) {
+    // add option for yes or no
+    apc = apc.concat("!@#$%^&*()_+");
+    console.log(apc);
+  }
+
+  // check if one of the uppercase or lowercase or numeric or special characters is there
+  if (apc.passwordLength === 0) {
+    alert("Please select at least one character type");
+    return;
+  }
+
+
+  // generate the password
+  for (var i = 0; i < passwordLength; i++) {
+    var random = Math.floor(Math.random() * apc.length);
+    passord += apc[random];
+
+    return password;
+  }
 }
-
-// confirm to include uppercase letters, lowercase letters, numeric, special characters
-if(confirm("Do you want to include uppercase letters?")) {
-  apc = apc.concat("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
-  console.log(apc);
-} 
-if(confirm("Do you want to include lowercase letters?")) {
-  // add option for yes or no
-  apc = apc.concat("abcdefghijklmnopqrstuvwxyz");
-  console.log(apc);
-}
-if (confirm("Do you want to include numbers?")) {
-  // add option for yes or no
-  apc = apc.concat("0123456789");
-  console.log(apc);
-}
-if (confirm("Do you want to include special characters?")) {
-  // add option for yes or no
-  apc = apc.concat("!@#$%^&*()_+");
-  console.log(apc);
-}
-
-// check if one of the uppercase or lowercase or numeric or special characters is there
-
-
-
-// generate the password
-
-
 
 
 
