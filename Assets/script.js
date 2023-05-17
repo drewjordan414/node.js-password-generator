@@ -20,7 +20,7 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
+  console.log(passwordText);
 }
 
 // listen to generate button
@@ -35,6 +35,7 @@ function generatePassword() {
   // loop to check if the password is between 8 and 128 chars
   if (passwordLength < 8 || passwordLength > 128 || isNaN(passwordLength)) {
     alert("Please enter a valid number between 8 and 128");
+    console.log(passwordLength);
     return;
   }
 }
@@ -42,15 +43,22 @@ function generatePassword() {
 // confirm to include uppercase letters, lowercase letters, numeric, special characters
 if(confirm("Do you want to include uppercase letters?")) {
   apc = apc.concat("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
+  console.log(apc);
 } 
 if(confirm("Do you want to include lowercase letters?")) {
+  // add option for yes or no
   apc = apc.concat("abcdefghijklmnopqrstuvwxyz");
+  console.log(apc);
 }
 if (confirm("Do you want to include numbers?")) {
+  // add option for yes or no
   apc = apc.concat("0123456789");
+  console.log(apc);
 }
 if (confirm("Do you want to include special characters?")) {
+  // add option for yes or no
   apc = apc.concat("!@#$%^&*()_+");
+  console.log(apc);
 }
 
 // check if one of the uppercase or lowercase or numeric or special characters is there
