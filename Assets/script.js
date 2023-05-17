@@ -38,24 +38,27 @@ function generatePassword() {
     console.log(passwordLength);
     return;
   }
-
-
+  var spc = prompt("Do you want to include special characters?");
+  var num = prompt("Do you want to include numbers?");
+  var lowercase = prompt("Do you want to include lowercase letters?");
+  var uppercase = prompt("Do you want to include uppercase letters?");
   // confirm to include uppercase letters, lowercase letters, numeric, special characters
-  if (confirm("Do you want to include uppercase letters?")) {
+  
+  if (prompt("Do you want to include uppercase letters?")) {
     apc = apc.concat("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
     console.log(apc);
   }
-  if (confirm("Do you want to include lowercase letters?")) {
+  if (prompt("Do you want to include lowercase letters?")) {
     // add option for yes or no
     apc = apc.concat("abcdefghijklmnopqrstuvwxyz");
     console.log(apc);
   }
-  if (confirm("Do you want to include numbers?")) {
+  if (prompt("Do you want to include numbers?")) {
     // add option for yes or no
     apc = apc.concat("0123456789");
     console.log(apc);
   }
-  if (confirm("Do you want to include special characters?")) {
+  if (prompt("Do you want to include special characters?")) {
     // add option for yes or no
     apc = apc.concat("!@#$%^&*()_+");
     console.log(apc);
@@ -76,27 +79,6 @@ function generatePassword() {
     return password;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 // ask for length of the password
