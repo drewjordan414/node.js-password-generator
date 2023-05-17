@@ -29,12 +29,10 @@ generateBtn.addEventListener("click", writePassword);
 
 function generatePassword() {
   // add an empty array to store the password
-  var apc = [];
-
   var password = ''; // empty string to store the password
 
   // line 36,,,, you might be giving me some trouble
-  var passwordLength = prompt("Enter a password between 8 and 128 characters long"); 
+  var passwordLength = prompt("Enter a length between 8 and 128 characters long"); 
   // loop to check if the password is between 8 and 128 chars
 
   if (passwordLength < 8 || passwordLength > 128 || isNaN(passwordLength)) {
@@ -42,32 +40,57 @@ function generatePassword() {
     console.log(passwordLength);
     return;
   }
-  var spc = prompt("Do you want to include special characters?");
-  var num = prompt("Do you want to include numbers?");
-  var lowercase = prompt("Do you want to include lowercase letters?");
-  var uppercase = prompt("Do you want to include uppercase letters?");
+  // var spc = prompt("Do you want to include special characters?");
+  // var num = prompt("Do you want to include numbers?");
+  // var lowercase = prompt("Do you want to include lowercase letters?");
+  // var uppercase = prompt("Do you want to include uppercase letters?");
   // confirm to include uppercase letters, lowercase letters, numeric, special characters
-
-  // spc logic
-  if (spc, num, lowercase, uppercase === "yes", "Yes", "YES") {
-    apc = apc.concat(spc, num, lowercase, uppercase);
-    console.log(apc);
-  } else if (spc === "no", "No", "NO") {
-    console.log(apc);
-  } else (spc !== "yes", "Yes", "YES", "no", "No", "NO"); {
-    alert("Please enter yes or no");
-    console.log(apc);
+  apc = ''; // all possible characters
+  if (confirm("Do you want to include special characters?")) {
+    apc += '!@#$%^&*()_+';
+  }
+  if (confirm("Do you want to include numbers?")) {
+    apc += '0123456789';
+  }
+  if (confirm("Do you want to include lowercase letters?")) {
+    apc += 'abcdefghijklmnopqrstuvwxyz';
+  }
+  if (confirm("Do you want to include uppercase letters?")) {
+    apc += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  }
+  if (apc === ''){
+    alert("Please select at least one character type");
     return;
   }
-}
-  //loop
-  for(generatePassword(i=0; i < passwordLength; i++)){
+  for (var i=0; i < passwordLength; i++){
     var random = Math.floor(Math.random() * apc.length);
-    console.log(random);
     password += apc[random];
-
-    return password;
   }
+  return password;
+}
+
+
+
+  // spc logic
+//   if (spc, num, lowercase, uppercase === "yes", "Yes", "YES") {
+//     apc = apc.concat(spc, num, lowercase, uppercase);
+//     console.log(apc);
+//   } else if (spc === "no", "No", "NO") {
+//     console.log(apc);
+//   } else (spc !== "yes", "Yes", "YES", "no", "No", "NO"); {
+//     alert("Please enter yes or no");
+//     console.log(apc);
+//     return;
+//   }
+
+  //loop
+  // for(generatePassword(i=0; i < passwordLength; i++)){
+  //   var random = Math.floor(Math.random() * apc.length);
+  //   console.log(random);
+  //   password += apc[random];
+
+  //   return password;
+  // }
 
 
     // if (prompt("Do you want to include uppercase letters?")) {
