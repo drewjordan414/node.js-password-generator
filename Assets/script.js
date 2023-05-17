@@ -31,11 +31,12 @@ function generatePassword() {
   // add an empty array to store the password
   var apc = [];
 
-  // var password = ''; --- same with this ones
+  var password = ''; // empty string to store the password
 
   // line 36,,,, you might be giving me some trouble
   var passwordLength = prompt("Enter a password between 8 and 128 characters long"); 
   // loop to check if the password is between 8 and 128 chars
+
   if (passwordLength < 8 || passwordLength > 128 || isNaN(passwordLength)) {
     alert("Please enter a valid number between 8 and 128");
     console.log(passwordLength);
@@ -59,6 +60,16 @@ function generatePassword() {
     return;
   }
 }
+  //loop
+  for(generatePassword(i=0; i < passwordLength; i++)){
+    var random = Math.floor(Math.random() * apc.length);
+    console.log(random);
+    password += apc[random];
+
+    return password;
+  }
+
+
     // if (prompt("Do you want to include uppercase letters?")) {
     //   apc = apc.concat("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
     //   console.log(apc);
