@@ -1,7 +1,7 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 console.log(generateBtn);
-var instruct = prompt("Enter a password between 8 and 128 characters long");
+var instruct = alert("Please click the generate password button to start the process");
 
 // Write password to the #password input
 function writePassword() {
@@ -30,8 +30,11 @@ generateBtn.addEventListener("click", writePassword);
 function generatePassword() {
   // add an empty array to store the password
   var apc = [];
-  var password = '';
-  var passwordLength = prompt("Enter a password between 8 and 128 characters long");
+
+  // var password = ''; --- same with this ones
+
+  // line 36,,,, you might be giving me some trouble
+  var passwordLength = prompt("Enter a password between 8 and 128 characters long"); 
   // loop to check if the password is between 8 and 128 chars
   if (passwordLength < 8 || passwordLength > 128 || isNaN(passwordLength)) {
     alert("Please enter a valid number between 8 and 128");
@@ -46,7 +49,7 @@ function generatePassword() {
 
   // spc logic
   if (spc, num, lowercase, uppercase === "yes", "Yes", "YES") {
-    apc = apc.concat("!@#$%^&*()_+");
+    apc = apc.concat(spc, num, lowercase, uppercase);
     console.log(apc);
   } else if (spc === "no", "No", "NO") {
     console.log(apc);
