@@ -34,8 +34,8 @@ generateBtn.addEventListener("click", writePassword);
 function generatePassword() {
   // add an empty array to store the password
 
-  var password = ''; // empty string to store the password
-  // line 36,,,, you might be giving me some trouble
+  var password = []; // changed to an array tos store the password
+  
 
   var passwordLength = parseInt(prompt("Enter a length between 8 and 128 characters long")); 
   // loop to check if the password is between 8 and 128 chars
@@ -48,7 +48,7 @@ function generatePassword() {
     return;
   }
 
-  apc = ''; // all possible characters
+  apc = []; // all possible characters --- changed to an array to store the characters
   if (confirm("Do you want to include special characters?")) {
     apc += '!@#$%^&*()_+';
   }
