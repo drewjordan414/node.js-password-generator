@@ -35,12 +35,11 @@ function generatePassword() {
   // add an empty array to store the password
 
   var password = []; // changed to an array tos store the password
-  
+  console.log(password);
 
   var passwordLength = parseInt(prompt("Enter a length between 8 and 128 characters long")); 
+
   // loop to check if the password is between 8 and 128 chars
-
-
   // is NaN -- not a number used becuase pasword length is a string
   if (passwordLength < 8 || passwordLength > 128 || isNaN(passwordLength)) {
     alert("Please enter a valid number between 8 and 128");
@@ -67,6 +66,7 @@ function generatePassword() {
 
   if (apc === ''){
     alert("Please select at least one character type");
+    console.log(apc);
     return;
   }
   // loop to generate the password
