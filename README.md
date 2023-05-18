@@ -6,6 +6,11 @@ In this project I got more comfortable with if statements and think through the 
 # The Program
 1. When the user clicks the generate password button, they are prompted to enter a number between 8 and 128.
 2. If the user enters a number outside of the range, they are alerted to enter a number between 8 and 128.
+3. If the user enters a number within the range, they are asked if they want to include lowercase, uppercase, numeric, and/or special characters.
+4. If the user does not select any of the character types, they are alerted to select at least one character type.
+    - the user can click cancel in the pop-up window to decline a character type
+5. If the user selects at least one character type, a password is generated that matches the selected criteria and is displayed in the text box.
+6. If the user clicks the generate password button again, the password is replaced with a new password.
 
 ## Acceptance Criteria
 ```
