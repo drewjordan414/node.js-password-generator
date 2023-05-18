@@ -1,7 +1,13 @@
 # node.js-password-generator
 
-## Acceptance Criteria
+# About
+In this project I got more comfortable with if statements and think through the logic as well as loops. Before this project, I was struggling a bit with them, however now i'm feeling more confident.
 
+# The Program
+1. When the user clicks the generate password button, they are prompted to enter a number between 8 and 128.
+2. If the user enters a number outside of the range, they are alerted to enter a number between 8 and 128.
+
+## Acceptance Criteria
 ```
 GIVEN I need a new, secure password
 WHEN I click the button to generate a password
