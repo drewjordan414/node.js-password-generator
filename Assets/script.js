@@ -14,9 +14,7 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 function writePassword() {
-  // password varible is equal to the generatePassword function
   var password = generatePassword()
-  // connecting the password to the id password in the html
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
@@ -59,4 +57,8 @@ function generatePassword() {
   }
   return password;
 }
+
+
+
+
 

@@ -1,7 +1,33 @@
 # node.js-password-generator
 
 # About
-In this project I got more comfortable with if statements and think through the logic as well as loops. Before this project, I was struggling a bit with them, however now i'm feeling more confident.
+Through this project, I've gained proficiency with if statements and logical thinking, as well as managing loops. Previously, I found these concepts challenging, but I now approach them with increased confidence.
+
+Originally, I intended to use prompts to gather user input for the character type. However, upon reflection and experimentation, I discovered that allowing users to choose between accept and cancel provided a more efficient and intuitive experience. I also found that using a confirm window allowed me to use a single if statement to determine whether or not to include a character type. 
+
+- Here is an example code of my though process for the character type:
+
+```
+ if (prompt("Do you want to include uppercase letters?")) {
+      apc = apc.concat("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
+      console.log(apc);
+    }
+    if (prompt("Do you want to include lowercase letters?")) {
+      // add option for yes or no
+      apc = apc.concat("abcdefghijklmnopqrstuvwxyz");
+      console.log(apc);
+    }
+    if (prompt("Do you want to include numbers?")) {
+      // add option for yes or no
+      apc = apc.concat("0123456789");
+      console.log(apc);
+    }
+    if (prompt("Do you want to include special characters?")) {
+      // add option for yes or no
+      apc = apc.concat("!@#$%^&*()_+");
+      console.log(apc);
+    }
+```
 
 # The Program
 1. When the user clicks the generate password button, they are prompted to enter a number between 8 and 128.
@@ -10,7 +36,9 @@ In this project I got more comfortable with if statements and think through the 
 4. If the user does not select any of the character types, they are alerted to select at least one character type.
     - the user can click cancel in the pop-up window to decline a character type
 5. If the user selects at least one character type, a password is generated that matches the selected criteria and is displayed in the text box.
+    - the user can also select multiple character types
 6. If the user clicks the generate password button again, the password is replaced with a new password.
+
 
 ## Acceptance Criteria
 ```
