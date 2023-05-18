@@ -1,11 +1,13 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 console.log(generateBtn);
+// instructs the user how to operate the password generator
 var instruct = alert("Please click the generate password button to start the process");
 
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword()
+  // connecting the password to the id password in the html
   var passwordText = document.querySelector("#password");
   passwordText.value = password;
 }
