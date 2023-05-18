@@ -14,7 +14,9 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 function writePassword() {
+  // password varible is equal to the generatePassword function
   var password = generatePassword()
+  // connecting the password to the id password in the html
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
@@ -57,61 +59,4 @@ function generatePassword() {
   }
   return password;
 }
-  // spc logic
-//   if (spc, num, lowercase, uppercase === "yes", "Yes", "YES") {
-//     apc = apc.concat(spc, num, lowercase, uppercase);
-//     console.log(apc);
-//   } else if (spc === "no", "No", "NO") {
-//     console.log(apc);
-//   } else (spc !== "yes", "Yes", "YES", "no", "No", "NO"); {
-//     alert("Please enter yes or no");
-//     console.log(apc);
-//     return;
-//   }
-
-  //loop
-  // for(generatePassword(i=0; i < passwordLength; i++)){
-  //   var random = Math.floor(Math.random() * apc.length);
-  //   console.log(random);
-  //   password += apc[random];
-
-  //   return password;
-  // }
-
-
-    // if (prompt("Do you want to include uppercase letters?")) {
-    //   apc = apc.concat("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
-    //   console.log(apc);
-    // }
-    // if (prompt("Do you want to include lowercase letters?")) {
-    //   // add option for yes or no
-    //   apc = apc.concat("abcdefghijklmnopqrstuvwxyz");
-    //   console.log(apc);
-    // }
-    // if (prompt("Do you want to include numbers?")) {
-    //   // add option for yes or no
-    //   apc = apc.concat("0123456789");
-    //   console.log(apc);
-    // }
-    // if (prompt("Do you want to include special characters?")) {
-    //   // add option for yes or no
-    //   apc = apc.concat("!@#$%^&*()_+");
-    //   console.log(apc);
-    // }
-
-    // check if one of the uppercase or lowercase or numeric or special characters is there
-//     if (apc.passwordLength === 0) {
-//       alert("Please select at least one character type");
-//       return;
-//     }
-
-
-//     // generate the password
-//     for (var i = 0; i < passwordLength; i++) {
-//       var random = Math.floor(Math.random() * apc.length);
-//       password += apc[random];
-
-//       return password;
-//     }
-// }
 
