@@ -49,19 +49,19 @@ function generatePassword() {
 
   apc = []; // all possible characters --- changed to an array to store the characters
   if (confirm("Do you want to include special characters?")) {
-    apc += '!@#$%^&*()_+';
+    apc += ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "=", "+", "[", "]", "{", "}", "|", ";", ":", "'", ",", ".", "/", "?", "<", ">", "~", "`"]
   }
 
   if (confirm("Do you want to include numbers?")) {
-    apc += '0123456789';
+    apc += [0,1,2,3,4,5,6,7,8,9];
   }
 
   if (confirm("Do you want to include lowercase letters?")) {
-    apc += 'abcdefghijklmnopqrstuvwxyz';
+    apc += ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j","k","l","m","n","o","p","q","r","s","t","u","v","w","x", "y", "z"];
   }
 
   if (confirm("Do you want to include uppercase letters?")) {
-    apc += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    apc += ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O", "P","Q","R","S","T","U","V","W","X","Y","Z"];
   }
 
   if (apc === ''){
@@ -69,6 +69,7 @@ function generatePassword() {
     console.log(apc);
     return;
   }
+
   // loop to generate the password
   for (var i=0; i < passwordLength; i++){
     var random = Math.floor(Math.random() * apc.length);
@@ -76,6 +77,7 @@ function generatePassword() {
   }
   return password;
 }
+
 
 
 
